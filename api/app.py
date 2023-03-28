@@ -7,7 +7,7 @@ from api import Predictor, InputModel
 app = FastAPI()
 
 templates = Jinja2Templates(directory="Views")
-app.mount("/Views", StaticFiles(directory="frontend"), name="views")
+app.mount("/Views", StaticFiles(directory="Views"), name="views")
 app.mount("/node_modules", StaticFiles(directory="node_modules"), name="modules")
 
 
